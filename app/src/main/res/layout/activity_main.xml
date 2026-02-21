@@ -1,0 +1,106 @@
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:contentDescription="Logo da Hamburgueria Z"
+            android:scaleType="centerCrop"
+            android:src="@drawable/logo_hamburgueria" />
+
+        <TextView
+            style="@style/EstiloTexto"
+            android:text="Faça seu pedido" />
+
+        <EditText
+            android:id="@+id/edit_text_nome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nome" />
+
+        <CheckBox
+            android:id="@+id/checkbox_bacon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bacon (R$ 2,00)" />
+
+        <CheckBox
+            android:id="@+id/checkbox_queijo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Queijo (R$ 2,00)" />
+
+        <CheckBox
+            android:id="@+id/checkbox_onion_rings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Onion Rings (R$ 3,00)" />
+
+        <TextView
+            style="@style/EstiloTexto"
+            android:text="Quantidade" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button_subtrair"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-" />
+
+            <TextView
+                android:id="@+id/text_view_quantidade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="0"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/button_somar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/EstiloTexto"
+            android:text="Resumo do pedido" />
+
+        <TextView
+            style="@style/EstiloTexto"
+            android:text="Preço total" />
+
+        <TextView
+            android:id="@+id/text_view_preco_total"
+            style="@style/EstiloTexto"
+            android:text="R$ 0,00" />
+
+        <TextView
+            android:id="@+id/text_view_resumo_pedido"
+            style="@style/EstiloTexto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/button_enviar_pedido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enviar Pedido" />
+
+    </LinearLayout>
+</ScrollView>
